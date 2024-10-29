@@ -1,7 +1,7 @@
 function Thanks() {
   return (
     <section className="py-12">
-        <p className="text-2xl text-Apricot text-center">" Thanks For Scrolling "</p>
+        <p className="text-xl text-Apricot text-center">" Thanks For Scrolling "</p>
     </section>
   )
 }

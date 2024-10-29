@@ -1,24 +1,33 @@
-import { location, mail, phone } from "../helpers/images"
 
 function ContactMe() {
   return (
-    <section className="bg-[#3d3e42] py-12 flex items-center justify-center max-lg:px-4" id="contactMe">
+    <section className="bg-[#0A0A0A] py-12 flex items-center justify-center max-lg:px-4" id="contactMe">
         <div className="max-w-[900px] w-full">
-            <h2 className="text-4xl mb-3 pb-3">Contact Me</h2>
-            <div className="grid grid-cols-4 gap-5 text-lg max-lg:grid-cols-1">
-                <a href="mailto:sakthikumaranofficial@gmail.com" className="flex lg:col-start-1 lg:col-end-3  items-center justify-center gap-2 bg-Midnight-Gray w-full p-3 rounded-lg text-Apricot">
-                    <img src={mail} className="w-[25px]" alt="" />
-                    <p className="max-sm:text-sm">Sakthikumaranofficial@gmail.com</p>
-                </a>
-                <a href="tel:+919364408334" className="flex items-center justify-center lg:col-start-3 lg:col-end-5 gap-2 bg-Midnight-Gray w-full p-3 rounded-lg text-Apricot">
-                    <img src={phone} className="w-[25px]" alt="" />
-                    <p className="max-sm:text-sm">(+91) 9364408334</p>
-                </a>
-                <a href="https://www.google.com/maps/place/Coimbatore,+Tamil+Nadu/@11.0139689,76.967235,12z/data=!3m1!4b1!4m6!3m5!1s0x3ba859af2f971cb5:0x2fc1c81e183ed282!8m2!3d11.0168445!4d76.9558321!16zL20vMDE5ZmM0?entry=ttu&g_ep=EgoyMDI0MDkyNS4wIKXMDSoASAFQAw%3D%3D" className="flex items-center justify-center lg:col-start-[-4] lg:col-end-[-2] gap-2 bg-Midnight-Gray w-full p-3 rounded-lg text-Apricot">
-                    <img src={location} className="w-[25px]" alt="" />
-                    <p className="max-sm:text-sm">Coimabatore, Tamil Nadu, India</p>
-                </a>
-            </div>
+            <h2 className="text-2xl mb-3 pb-3">Contact Me</h2>
+            <form className="w-full relative pb-12">
+                <div className="grid grid-cols-2 place-items-center gap-8">
+                    <div className="w-full">
+                        <label htmlFor="firstname">First Name</label><br />
+                        <input type="text" className="bg-[#0A0A0A] border-[#ffffff24] border-2 rounded-md w-full mt-2 p-2 placeholder:text-sm" name="firstname" id="firstname" placeholder="John"/>
+                    </div>
+                    <div className="w-full">
+                        <label htmlFor="lastname">Last Name</label><br />
+                        <input type="text" className="bg-[#0A0A0A] border-[#ffffff24] border-2 rounded-md w-full mt-2 p-2 placeholder:text-sm" name="lastname" id="lastname" placeholder="Doe"/>
+                    </div>
+                </div>
+                <div className="w-full mt-2">
+                    <label htmlFor="email">E-mail</label><br />
+                    <input type="email" className="bg-[#0A0A0A] border-[#ffffff24] border-2 rounded-md w-full mt-2 p-2 placeholder:text-sm" name="email" id="email" placeholder="example@example.com"/>
+                </div>
+                <div className="w-full mt-2">
+                    <label htmlFor="message">Message</label><br />
+                    <textarea name="message" className="bg-[#0A0A0A] border-[#ffffff24] border-2 rounded-md w-full mt-2 p-2 placeholder:text-sm" id="message" rows={4} placeholder="Your message here..."></textarea>
+                </div>
+                <button className="bg-white text-black text-md py-1 rounded-lg hover:bg-[#0A0A0A] hover:text-white border-[#ffffff24] border-2 transition-all ease-in-out cursor-pointer duration-300 mt-2 absolute right-1/2 translate-x-1/2 px-12 flex items-center gap-2 group">
+                    <p>Submit</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-[18px] transition-colors duration-300" viewBox="0 0 512 512"><path className="fill-current text-black group-hover:text-white" d="M16.1 260.2c-22.6 12.9-20.5 47.3 3.6 57.3L160 376l0 103.3c0 18.1 14.6 32.7 32.7 32.7c9.7 0 18.9-4.3 25.1-11.8l62-74.3 123.9 51.6c18.9 7.9 40.8-4.5 43.9-24.7l64-416c1.9-12.1-3.4-24.3-13.5-31.2s-23.3-7.5-34-1.4l-448 256zm52.1 25.5L409.7 90.6 190.1 336l1.2 1L68.2 285.7zM403.3 425.4L236.7 355.9 450.8 116.6 403.3 425.4z"/></svg>
+                </button>
+            </form>
         </div>
     </section>
   )
